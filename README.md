@@ -2,22 +2,25 @@
 
 Memex Automation Check-in Tool
 
-This is an automation script written in Node.js, designed to perform the following tasks on the Memex platform:
+This is an automation script written in Node.js for the Memex platform. It performs the following tasks:
 
-- Auto check-in.
-- Auto claim SBT (if the account meets the requirements).
-- Scheduled loop to repeat tasks at fixed intervals (every 12 hours).
+- Auto check-in
+- Auto claim SBT (if the account meets the requirements)
+- Scheduled loop to repeat tasks every 12 hours
 
 ## Features
+
 - **Auto Check-in**: Checks the daily check-in status and completes the check-in automatically.
-- **SBT Claiming**: Determines if the account meets the requirements and claims SBT automatically.
-- **Scheduled Loop**: Repeats tasks every 12 hours, supports multiple accounts.
+- **SBT Claiming**: Automatically claims SBT if the account qualifies.
+- **Scheduled Loop**: Repeats tasks every 12 hours, supporting multiple accounts.
 - **Colorful Log Output**: Displays task status for easier monitoring.
 
 ## Requirements
+
 - Node.js (>= 14.0.0)
 
 ### Dependencies
+
 - `axios`
 - `chalk`
 - `random-useragent`
@@ -25,52 +28,38 @@ This is an automation script written in Node.js, designed to perform the followi
 ## Installation and Setup
 
 1. Clone the project:
-   ```bash
-   git clone https://github.com/ziqing888/Memex-bot.git
-   cd Memex-bot
+    ```bash
+    git clone https://github.com/ziqing888/Memex-bot.git
+    cd Memex-bot
+    ```
 
-2. Install Depencies:
-   ```bash
-   npm install
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
+3. Prepare the `data.txt` file:
+    - Save the user's `query_id` to the `data.txt` file in the root directory, one per line.
+    - Create a `queries.txt` file in the project directory to configure QueryIDs (user identifiers).
 
-   Prepare the data.txt file:
+4. **Get QueryID**:
+    - If using Telegram WebApp:
+        1. Open the Telegram WebApp.
+        2. Press F12 to open Developer Tools and switch to the Console panel.
+        3. Enter the following command to get `initData`:
+            ```bash
+            copy(Telegram.WebApp.initData)
+            ```
+        - You will get a response like:
+            ```
+            query_id=...&user=%7B%22username%22%3A%22Alexyamin%22%7D&...
+            ```
 
-Save the user's query_id to the data.txt file in the project root directory, one per line. This file is required to simulate user actions.
-Create a queries.txt file in the project directory to configure QueryIDs (user identifiers).
+5. **Run the script**:
+    ```bash
+    node memex-proxy.js
+    ```
 
-🔑 Get QueryID
-If you're using the Telegram WebApp, you can obtain your QueryID by following these steps:
+## License
 
-Open your Telegram WebApp.
-
-Press F12 to open Developer Tools and switch to the Console panel.
-
-Enter the following command to get initData:
-```bash
-copy(Telegram.WebApp.initData)
-
-You’ll get something like:
-query_id=...&user=%7B%22username%22%3A%22Alexyamin%22%7D&...
-
-Running the Script :
-   ```bash
-   node memex-proxy.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+MIT License
