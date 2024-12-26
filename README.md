@@ -29,7 +29,7 @@ This is an automation script written in Node.js for the Memex platform. It perfo
 
 1. Clone the project:
     ```bash
-    git clone https://github.com/ziqing888/MemeX888.git
+    git clone https://github.com/marioatmajanugraha/MemeX888
     cd MemeX888
     ```
 
