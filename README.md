@@ -29,8 +29,8 @@ This is an automation script written in Node.js for the Memex platform. It perfo
 
 1. Clone the project:
     ```bash
-    git clone https://github.com/ziqing888/Memex-bot.git
-    cd Memex-bot
+    git clone https://github.com/ziqing888/MemeX888.git
+    cd MemeX888
     ```
 
 2. Install dependencies:
